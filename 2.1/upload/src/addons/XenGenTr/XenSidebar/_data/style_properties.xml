@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style_properties>
+    <style_property property_name="hirqiz_Sidebarcollapse" group_name="hirqiz_Sidebaroptions" title="Sidebar Kırma Aç/Kapa Seçeneği" description="" property_type="value" value_type="boolean" value_group="HirqizSidebarCollapse" display_order="10">
+      <value>1</value>
+    </style_property>
+    <style_property property_name="hirqiz_Sidebarflip" group_name="hirqiz_Sidebaroptions" title="Sidebar Sağa/Sola Alma Seçeneği" description="" property_type="value" value_type="boolean" value_group="HirqizSidebarFlip" display_order="20">
+      <value>1</value>
+    </style_property>
+	  <style_property property_name="hirqiz_Sidebarsticky" group_name="hirqiz_Sidebaroptions" title="Yapışkan Sidebar Aç/Kapa Seçeneği" description="" property_type="value" value_type="boolean" value_group="HirqizStickySidebar" display_order="30">
+      <value>1</value>
+    </style_property>
+	  <style_property property_name="hirqiz_Sidebar_offset" group_name="hirqiz_Sidebaroptions" title="Yapışkan Sidebar Yukarıdan Boşluk Ayarı" description="" property_type="value" value_type="string" depends_on="hirqiz_Sidebarsticky" value_group="HirqizStickySidebar" display_order="40">
+      <value>"50px"</value>
+    </style_property>
+</style_properties>

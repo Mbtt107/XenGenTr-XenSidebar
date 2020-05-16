@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <permission permission_group_id="XenSidebarCollapse" permission_id="XenSidebarCollapsePerm" permission_type="flag" interface_group_id="XenSidebar_perm" display_order="10"/>
+  <permission permission_group_id="XenSidebarSticky" permission_id="XenSidebarStickyPerm" permission_type="flag" interface_group_id="XenSidebar_perm" display_order="20"/>
+  <permission permission_group_id="XenSidebarFlip" permission_id="XenSidebarFlipPerm" permission_type="flag" interface_group_id="XenSidebar_perm" display_order="30"/>
+</permissions>

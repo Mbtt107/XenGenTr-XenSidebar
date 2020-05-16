@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="XenSidebarHtmlCollapse" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<div class="p-sectionLinks">
+			<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+				<div class="hScroller-scroll">
+					<ul class="p-sectionLinks-list">
+					<xf:foreach loop="$selectedNavChildren" key="$navId" value="$navEntry" i="$i">
+						<li>
+							<xf:macro name="nav_entry" arg-navId="{$navId}" arg-nav="{$navEntry}" arg-shortcut="alt+{$i}" />
+						</li>
+					</xf:foreach>
+					</ul>
+				</div>
+			</div>
+		</div>]]></find>
+    <replace><![CDATA[<div class="p-sectionLinks">
+			<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+				<div class="hScroller-scroll">
+					<ul class="p-sectionLinks-list">
+					<xf:foreach loop="$selectedNavChildren" key="$navId" value="$navEntry" i="$i">
+						<li>
+							<xf:macro name="nav_entry" arg-navId="{$navId}" arg-nav="{$navEntry}" arg-shortcut="alt+{$i}" />
+						</li>
+					</xf:foreach>
+
+					<xf:if is="property('hirqiz_Sidebarcollapse')">
+						<xf:if is="$template == 'forum_list'">
+							<xf:if is="{{ $xf.visitor.hasPermission('XenSidebarCollapse','XenSidebarCollapsePerm') }}">
+								<a href="javascript:void(0)" class="hirqiz-sidebar-toggle open" sidebar-state='collapse'><i class="fa fa-toggle-off" aria-hidden="true"></i></a>
+								<a href="javascript:void(0)" class="hirqiz-sidebar-toggle close" sidebar-state='collapsed'><i class="fa fa-toggle-on" aria-hidden="true"></i></a>
+							</xf:if>
+						</xf:if>
+					</xf:if>
+
+					<xf:if is="property('hirqiz_Sidebarflip')">
+						<xf:if is="$template == 'forum_list'">
+							<xf:if is="{{ $xf.visitor.hasPermission('XenSidebarFlip','XenSidebarFlipPerm') }}">
+								<a href="javascript:void(0)" class="hirqiz-flip-toggle flip" hirqiz-flip='flip'><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+								<a href="javascript:void(0)" class="hirqiz-flip-toggle flipped" hirqiz-flip='flipped'><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+							</xf:if>
+						</xf:if>
+					</xf:if>
+					</ul>
+				</div>
+			</div>
+		</div>]]></replace>
+  </modification>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="XenSidebarHtmlCompatibleCollapse" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<div class="p-sectionLinks">
+			<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+				<div class="hScroller-scroll">
+					<ul class="p-sectionLinks-list">
+					<xf:foreach loop="$selectedNavChildren" key="$navId" value="$navEntry" i="$i">
+						<li>
+							<xf:macro name="nav_entry" arg-navId="{$navId}" arg-nav="{$navEntry}" arg-shortcut="alt+{$i}" />
+						</li>
+					</xf:foreach>
+						<xf:if is="property('hirqiz_ResizeOnOff')">
+							<xf:if is="{{ $xf.visitor.hasPermission('XenResize','XenResizePerm') }}">
+								<a href="javascript:void(0)" class="hirqiz-resize-toggle close" expand-state='expanded'><i class="fa fa-expand" aria-hidden="true"></i></a>
+								<a href="javascript:void(0)" class="hirqiz-resize-toggle open" expand-state='expand'><i class="fa fa-compress" aria-hidden="true"></i></a>
+							</xf:if>
+						</xf:if>
+					</ul>
+				</div>
+			</div>
+		</div>]]></find>
+    <replace><![CDATA[<div class="p-sectionLinks">
+			<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+				<div class="hScroller-scroll">
+					<ul class="p-sectionLinks-list">
+					<xf:foreach loop="$selectedNavChildren" key="$navId" value="$navEntry" i="$i">
+						<li>
+							<xf:macro name="nav_entry" arg-navId="{$navId}" arg-nav="{$navEntry}" arg-shortcut="alt+{$i}" />
+						</li>
+					</xf:foreach>
+
+					<xf:if is="property('hirqiz_Sidebarcollapse')">
+						<xf:if is="$template == 'forum_list'">
+							<xf:if is="{{ $xf.visitor.hasPermission('XenSidebarCollapse','XenSidebarCollapsePerm') }}">
+								<a href="javascript:void(0)" class="hirqiz-sidebar-toggle open" sidebar-state='collapse'><i class="fa fa-toggle-off" aria-hidden="true"></i></a>
+								<a href="javascript:void(0)" class="hirqiz-sidebar-toggle close" sidebar-state='collapsed'><i class="fa fa-toggle-on" aria-hidden="true"></i></a>
+							</xf:if>
+						</xf:if>
+					</xf:if>
+
+					<xf:if is="property('hirqiz_Sidebarflip')">
+						<xf:if is="$template == 'forum_list'">
+							<xf:if is="{{ $xf.visitor.hasPermission('XenSidebarFlip','XenSidebarFlipPerm') }}">
+								<a href="javascript:void(0)" class="hirqiz-flip-toggle flip" hirqiz-flip='flip'><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+								<a href="javascript:void(0)" class="hirqiz-flip-toggle flipped" hirqiz-flip='flipped'><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+							</xf:if>
+						</xf:if>
+					</xf:if>
+
+					<xf:if is="property('hirqiz_ResizeOnOff')">
+							<xf:if is="{{ $xf.visitor.hasPermission('XenResize','XenResizePerm') }}">
+								<a href="javascript:void(0)" class="hirqiz-resize-toggle close" expand-state='expanded'><i class="fa fa-expand" aria-hidden="true"></i></a>
+								<a href="javascript:void(0)" class="hirqiz-resize-toggle open" expand-state='expand'><i class="fa fa-compress" aria-hidden="true"></i></a>
+							</xf:if>
+						</xf:if>
+					</ul>
+				</div>
+			</div>
+		</div>]]></replace>
+  </modification>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="XenSidebarHtmlSidebar" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$sidebar">
+				<div class="p-body-sidebar">
+					<xf:ad position="container_sidebar_above" />
+					<xf:foreach loop="$sidebar" value="$sidebarHtml">
+						{$sidebarHtml}
+					</xf:foreach>
+					<xf:ad position="container_sidebar_below" />
+				</div>
+			</xf:if>]]></find>
+    <replace><![CDATA[<xf:css src="XenSidebar.less" />
+
+			<xf:if is="$sidebar">
+				<div id="sidebar-collapse" class="p-body-sidebar">
+					<xf:if is="property('hirqiz_Sidebarsticky')">
+						<xf:if is="{{ $xf.visitor.hasPermission('XenSidebarSticky','XenSidebarStickyPerm') }}">
+							<div class="hirqiz-sidebar" style="position:sticky;">
+						<xf:else />
+							<div class="hirqiz-sidebar">
+						</xf:if>
+					<xf:else />
+						<div class="hirqiz-sidebar">
+					</xf:if>
+						<xf:ad position="container_sidebar_above" />
+						<xf:foreach loop="$sidebar" value="$sidebarHtml">
+							{$sidebarHtml}
+						</xf:foreach>
+						<xf:ad position="container_sidebar_below" />
+					</div>
+				</div>
+			</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="helper_js_global" modification_key="XenSidebarJSF" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$xf.fullJs">
+		<script src="{{ js_url('xf/preamble.js') }}"></script>
+	<xf:else />
+		<script src="{{ js_url('xf/preamble.min.js') }}"></script>
+	</xf:if>]]></find>
+    <replace><![CDATA[<xf:if is="$xf.fullJs">
+		<script src="{{ js_url('xf/preamble.js') }}"></script>
+	<xf:else />
+		<script src="{{ js_url('xf/preamble.min.js') }}"></script>
+	</xf:if>
+	
+	<script>
+		var xfhtml = document.getElementById('XF');
+		function addClass(el, className) { if (el.classList) el.classList.add(className); else if (!hasClass(el, className)) el.className += ' ' + className; }
+		function getCookie(name) { var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)'); return v ? v[2] : null; }
+		function setCookie(name, value, days) { var d = new Date; d.setTime(d.getTime() + 24*60*60*1000*days); document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString(); }
+		function deleteCookie(name) { setCookie(name, '', -1); }
+		var sidebarCookie = getCookie('sidebarState');
+		if(sidebarCookie){ xfhtml.setAttribute('sidebar-state', '' + sidebarCookie + '');	} else { xfhtml.setAttribute('sidebar-state', "collapse"); }
+		var hirqizFlip = getCookie('hirqizFlip');
+		if(hirqizFlip){ xfhtml.setAttribute('hirqiz-flip', '' + hirqizFlip + '');	} else { xfhtml.setAttribute('hirqiz-flip', "flip"); }
+	</script>]]></replace>
+  </modification>
+  <modification type="public" template="helper_js_global" modification_key="XenSidebarJSS" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>]]></find>
+    <replace><![CDATA[<script>
+		$(document).ready(function(){
+			var html = $('#XF');
+			
+			$("a.hirqiz-sidebar-toggle.open").on('click', function(){
+				var styleid = html.attr('style-id');
+				var sidebarState = $(this).attr("sidebar-state");
+				html.attr('sidebar-state', '' + sidebarState + '');
+				setCookie('sidebarState', '' + sidebarState + '', 30);
+			});
+			$("a.hirqiz-sidebar-toggle.close").on('click', function(){
+				var styleid = html.attr('style-id');
+				var sidebarState = $(this).attr("sidebar-state");
+				html.attr('sidebar-state', '' + sidebarState + '');
+				setCookie('sidebarState', '' + sidebarState + '', 30);
+			});
+
+			$("a.hirqiz-flip-toggle.flip").on('click', function(){
+				var styleid = html.attr('style-id');
+				var hirqizFlip = $(this).attr("hirqiz-flip");
+				html.attr('hirqiz-flip', '' + hirqizFlip + '');
+				setCookie('hirqizFlip', '' + hirqizFlip + '', 30);
+			});
+			$("a.hirqiz-flip-toggle.flipped").on('click', function(){
+				var styleid = html.attr('style-id');
+				var hirqizFlip = $(this).attr("hirqiz-flip");
+				html.attr('hirqiz-flip', '' + hirqizFlip + '');
+				setCookie('hirqizFlip', '' + hirqizFlip + '', 30);
+			});
+		});
+	</script>
+	
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>]]></replace>
+  </modification>
+</template_modifications>
