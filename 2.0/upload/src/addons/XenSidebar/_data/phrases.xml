@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phrases>
-  <phrase title="style_prop_group.hirqiz_Sidebaroptions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[[XenGenTr] XenSidebar Kontrolleri]]></phrase>
+  <phrase title="style_prop_group.hirqiz_Sidebaroptions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[XenSidebar Kontrolleri]]></phrase>
   <phrase title="style_prop_group_desc.hirqiz_Sidebaroptions" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[XenSidebar Özelleştirmeleri.]]></phrase>
   <phrase title="permission.XenSidebarCollapse_XenSidebarCollapsePerm" version_id="1000010" version_string="1.1.1"><![CDATA[Sidebarı kırabilir mi?]]></phrase>
   <phrase title="permission.XenSidebarSticky_XenSidebarStickyPerm" version_id="1000010" version_string="1.1.1"><![CDATA[Yapışkan sidebar görünümüne erişebilir mi?]]></phrase>
   <phrase title="permission.XenSidebarFlip_XenSidebarFlipPerm" version_id="1000010" version_string="1.1.1"><![CDATA[Sidebarın konumunu sağ/sol olarak değiştirebilir mi?]]></phrase>
-  <phrase title="permission_interface.XenSidebar_perm" version_id="1000010" version_string="1.1.1"><![CDATA[[XenGenTr] XenSidebar İzinleri]]></phrase>
+  <phrase title="permission_interface.XenSidebar_perm" version_id="1000010" version_string="1.1.1"><![CDATA[XenSidebar İzinleri]]></phrase>
 </phrases>
